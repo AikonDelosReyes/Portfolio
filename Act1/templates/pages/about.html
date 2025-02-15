@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>About Me</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Aikon Delos Reyes</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+            <li><a href="{% url 'portfolio:about' %}">About</a></li>
+            <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+            <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="left-box">
+            <h1>About Me</h1>
+            <p>Hi, I'm Aikon Delos Reyes, a passionate web developer with a love for creating dynamic and responsive web applications. I enjoy learning new technologies and improving my skills.</p>
+            <p>In my free time, I like to explore new programming languages, contribute to open-source projects, and engage with the developer community.</p>
+        </div>
+    </div>
+
+    <!-- Experience and Hobbies Section -->
+    <div class="info-container">
+        <div class="info-box">
+            <h2>Experience</h2>
+            <p>- Skilled in HTML, CSS, JavaScript, and Svelte</p>
+            <p>- Worked on multiple freelance projects and college assignments</p>
+        </div>
+        <div class="info-box">
+            <h2>Hobbies</h2>
+            <p>- Coding and exploring new technologies</p>
+            <p>- Playing video games and online competitive gaming</p>
+            <p>- Watching tech-related YouTube videos</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Aikon Delos Reyes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

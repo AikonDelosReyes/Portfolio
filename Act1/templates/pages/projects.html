@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Projects</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Aikon Delos Reyes</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+            <li><a href="{% url 'portfolio:about' %}">About</a></li>
+            <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+            <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+            
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="projects-section">
+        <h1 class="section-title">My Projects</h1>
+
+        <div class="projects-container">
+
+          <!-- Project 1 -->
+<div class="project-card">
+    <a href="{% static 'pdfs/project1.pdf' %}" target="_blank">
+        <img src="{% static 'images/project1.png' %}" alt="Movie Tracker PDF" class="project-img">
+    </a>
+    <div class="project-info">
+        <h2>Movie Tracker App</h2>
+        <p>A web app that helps users track and discover movies with personalized recommendations.</p>
+    </div>
+</div>
+
+<!-- Project 2 -->
+<div class="project-card">
+    <a href="{% static 'pdfs/project2.pdf' %}" target="_blank">
+        <img src="{% static 'images/project2.png' %}" alt="Optic Oasis PDF" class="project-img">
+    </a>
+    <div class="project-info">
+        <h2>Lecture Note Sharing Platform</h2>
+        <p>An Object-Oriented Programming mock up.</p>
+    </div>
+</div>
+
+<!-- Project 3 -->
+<div class="project-card">
+    <a href="{% static 'pdfs/project3.pdf' %}" target="_blank">
+        <img src="{% static 'images/project3.png' %}" alt="Pollify PDF" class="project-img">
+    </a>
+    <div class="project-info">
+        <h2>Cactus ADP</h2>
+        <p>A Activitiy on Animation where i creates a cactus page by page.</p>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Aikon Delos Reyes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
