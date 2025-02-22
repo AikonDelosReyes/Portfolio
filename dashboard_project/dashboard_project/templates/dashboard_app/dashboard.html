@@ -1,0 +1,18 @@
+{% extends 'dashboard_app/base.html' %}
+{% load custom_filters %}
+
+{% block content %}
+<h2 class="mt-4">Dashboard Overview</h2>
+<div class="row">
+    {% for item in data %}
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ item.title }}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.count|currency_format }}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
